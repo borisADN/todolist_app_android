@@ -21,6 +21,7 @@ data class User(
     @ColumnInfo(name = "state")
     val state: Int = 0
 )
+
 @Entity(tableName = "otp_codes")
 data class OTPCode(
 
@@ -30,4 +31,4 @@ data class OTPCode(
     val email: String,
     val code: String,
 
-)
+    )

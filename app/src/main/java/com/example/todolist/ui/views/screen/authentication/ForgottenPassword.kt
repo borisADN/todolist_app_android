@@ -51,65 +51,65 @@ fun ForgottenPassword(navController: NavController){
                     .padding(innerPadding)
                     .fillMaxSize()
             ) {
-Column(
-    verticalArrangement = Arrangement.spacedBy(
-        space = dimensionResource(id = R.dimen.size_4)
-    ),
-    modifier = Modifier
-        .background(color = MaterialTheme.colorScheme.background)
-        .fillMaxSize()
-        .padding(horizontal = dimensionResource(id = R.dimen.size_8))
-) {
-    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.size_4)))
-    Text(
-        text = stringResource(id = R.string.forgotten_password),
-        color = MaterialTheme.colorScheme.onBackground,
-        style = MaterialTheme.typography.titleLarge,
-        fontWeight = FontWeight.Bold
-    )
-    Text(
-        text = stringResource(id = R.string.forgotten_password_text),
-        color = MaterialTheme.colorScheme.onBackground,
-        style = MaterialTheme.typography.bodyMedium,
-        modifier = Modifier.padding(vertical = dimensionResource(id = R.dimen.size_4))
-    )
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.size_3))
-    ){
-        DefaultTextField(
-            value = email,
-            onValueChange = { email = it },
-            label = stringResource(id = R.string.email),
-            placeholder = stringResource(id = R.string.email_placeholder)
-        )
-    }
-    Button(
-        onClick = { /* handle submit action */ },
-        shape = RoundedCornerShape(dimensionResource(id = R.dimen.size_3)),
-        modifier = Modifier.fillMaxWidth()
-    ){
-        Text(text = stringResource(id = R.string.submit))
-    }
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.size_1))
-    ) {
-        Text(
-            text = stringResource(id = R.string.not_yet_registred),
-            style = MaterialTheme.typography.bodyMedium
-        )
-        Text(
-            text = stringResource(id = R.string.register),
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.primary,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.clickable {
-                navController.popBackStack()
-            }
-        )
-    }
-}
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(
+                        space = dimensionResource(id = R.dimen.size_4)
+                    ),
+                    modifier = Modifier
+                        .background(color = MaterialTheme.colorScheme.background)
+                        .fillMaxSize()
+                        .padding(horizontal = dimensionResource(id = R.dimen.size_8))
+                ) {
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.size_4)))
+                    Text(
+                        text = stringResource(id = R.string.forgotten_password),
+                        color = MaterialTheme.colorScheme.onBackground,
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold
+                    )
+                    Text(
+                        text = stringResource(id = R.string.forgotten_password_text),
+                        color = MaterialTheme.colorScheme.onBackground,
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier.padding(vertical = dimensionResource(id = R.dimen.size_4))
+                    )
+                    Column(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.size_3))
+                    ){
+                        DefaultTextField(
+                            value = email,
+                            onValueChange = { email = it },
+                            label = stringResource(id = R.string.email),
+                            placeholder = stringResource(id = R.string.email_placeholder)
+                        )
+                    }
+                    Button(
+                        onClick = { /* handle submit action */ },
+                        shape = RoundedCornerShape(dimensionResource(id = R.dimen.size_3)),
+                        modifier = Modifier.fillMaxWidth()
+                    ){
+                        Text(text = stringResource(id = R.string.submit))
+                    }
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.size_1))
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.not_yet_registred),
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                        Text(
+                            text = stringResource(id = R.string.register),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.primary,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.clickable {
+                                navController.popBackStack()
+                            }
+                        )
+                    }
+                }
             }
 
         }
